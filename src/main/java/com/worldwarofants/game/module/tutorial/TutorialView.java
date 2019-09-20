@@ -5,6 +5,10 @@ import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
 public class TutorialView extends AbstractView<TutorialViewModel> {
 
+	private final String START_MESSAGE = "Your colony is under attack! You are on the brink of defeat and you must fall back in order to avoid complete annihilation! ...";
+	private final String FIGHT_MESSAGE = "Your entire colony has been overrun and annihilated; a colony with such a low POPULATION is no match for an enemy of this size!";
+	private final String RETREAT_MESSAGE = "You made the right decision!";
+	
 	public TutorialView(TutorialViewModel viewModel) {
 		super(viewModel);
 	}
@@ -14,21 +18,21 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 		String retreatPrompt = String.format("* Retreat! - %s ", TutorialCommandHandler.COMMAND_RETREAT);
 		String quitPrompt = String.format("* Retreat! - %s ", TutorialCommandHandler.COMMAND_QUIT);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.spell("Your colony is under attack! You are on the brink of defeat and you must fall back in order to avoid complete annihilation! ...");
+		ConsoleOutputHandler.spell(START_MESSAGE);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post(fightPrompt);
 		ConsoleOutputHandler.post(retreatPrompt);
 		ConsoleOutputHandler.post(quitPrompt);
-		ConsoleOutputHandler.lineBreak();;
+		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("Please enter your command:");
 	}
 
 	public void renderTutorialScreenFight() {
-		ConsoleOutputHandler.spell("Your entire colony has been overrun and annihilated; a colony with such a low POPULATION is no match for an enemy of this size!");
+		ConsoleOutputHandler.spell(FIGHT_MESSAGE);
 	}
 
 	public void renderTutorialScreenRetreat() {
-		//TO-DO this is currently a dead end
-		ConsoleOutputHandler.spell("You made the right decision!");
+		//TODO this is currently a dead end
+		ConsoleOutputHandler.spell(RETREAT_MESSAGE);
 	}
 }
