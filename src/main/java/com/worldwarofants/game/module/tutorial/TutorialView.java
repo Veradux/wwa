@@ -16,7 +16,7 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 	public void renderTutorialScreenStart() {
 		String fightPrompt = String.format("* Fight! - %s ", TutorialCommandHandler.COMMAND_FIGHT);
 		String retreatPrompt = String.format("* Retreat! - %s ", TutorialCommandHandler.COMMAND_RETREAT);
-		String quitPrompt = String.format("* Retreat! - %s ", TutorialCommandHandler.COMMAND_QUIT);
+		String quitPrompt = String.format("* Quit! - %s ", TutorialCommandHandler.COMMAND_QUIT);
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell(START_MESSAGE);
 		ConsoleOutputHandler.lineBreak();
