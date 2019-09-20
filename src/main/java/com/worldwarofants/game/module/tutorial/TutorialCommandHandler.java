@@ -8,7 +8,7 @@ import com.worldwarofants.game.module.ModuleName;
 public class TutorialCommandHandler extends AbstractCommandHandler<TutorialController> {
 	
 	public static final String COMMAND_SHOW_TUTORIAL_SCREEN_START = "show";
-	public static final String COMMAND_CONTINUE = "fight";
+	public static final String COMMAND_FIGHT = "fight";
 	public static final String COMMAND_RETREAT = "retreat";
 	public static final String COMMAND_QUIT = "quit";
 
@@ -19,7 +19,7 @@ public class TutorialCommandHandler extends AbstractCommandHandler<TutorialContr
 	@Override
 	protected void defineCommands(Map<String, ICommand<TutorialController>> commands) {
 		commands.put(COMMAND_SHOW_TUTORIAL_SCREEN_START, (controller, args) -> controller.showTutorialScreenStart());
-		commands.put(COMMAND_CONTINUE, (controller, args) -> controller.continueTheFight());
+		commands.put(COMMAND_FIGHT, (controller, args) -> controller.fight());
 		commands.put(COMMAND_RETREAT, (controller, args) -> controller.retreat());
 		commands.put(COMMAND_QUIT, (controller, args) -> controller.quit());
 	}

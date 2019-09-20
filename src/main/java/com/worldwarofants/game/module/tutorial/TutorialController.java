@@ -14,13 +14,14 @@ public class TutorialController extends AbstractController<TutorialView> {
 		view.renderTutorialScreenStart();
 	}
 
-	public void continueTheFight(){
-		view.renderTutorialScreenContinue();
+	public void fight(){
+		view.renderTutorialScreenFight();
+		//since this is game-over, return to the start screen
 		quit();
 	}
 
 	public void retreat(){
-		view.renderTutorialScreenFallBack();
+		view.renderTutorialScreenRetreat();
 	}
 
 	//return to main menu
