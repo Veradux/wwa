@@ -19,7 +19,7 @@ public class TutorialController extends AbstractController<TutorialView> {
 		quit();
 	}
 
-	public void fallBack(){
+	public void retreat(){
 		view.renderTutorialScreenFallBack();
 	}
 

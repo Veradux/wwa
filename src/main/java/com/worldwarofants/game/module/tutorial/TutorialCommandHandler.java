@@ -20,7 +20,7 @@ public class TutorialCommandHandler extends AbstractCommandHandler<TutorialContr
 	protected void defineCommands(Map<String, ICommand<TutorialController>> commands) {
 		commands.put(COMMAND_SHOW_TUTORIAL_SCREEN_START, (controller, args) -> controller.showTutorialScreenStart());
 		commands.put(COMMAND_CONTINUE, (controller, args) -> controller.continueTheFight());
-		commands.put(COMMAND_FALLBACK, (controller, args) -> controller.fallBack());
+		commands.put(COMMAND_FALLBACK, (controller, args) -> controller.retreat());
 		commands.put(COMMAND_QUIT, (controller, args) -> controller.quit());
 	}
 
