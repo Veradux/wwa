@@ -15,13 +15,10 @@ public class StartMenuView extends AbstractView<StartMenuViewModel> {
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell("-- WORLD WAR OF ANTS --");
 		ConsoleOutputHandler.lineBreak();
-<<<<<<< HEAD
 		ConsoleOutputHandler.post("* New Game - 'new'");
 		ConsoleOutputHandler.post("* Exit - 'exit'");
-=======
 		ConsoleOutputHandler.post(newGamePrompt);
 		ConsoleOutputHandler.post(exitPrompt);
->>>>>>> menu
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.post("Please enter your command:");
 	}

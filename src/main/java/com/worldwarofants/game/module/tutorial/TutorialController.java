@@ -26,7 +26,7 @@ public class TutorialController extends AbstractController<TutorialView> {
 	//return to main menu
 	public void quit(){
 		String[] args = new String[0];
-		moduleNavigator.navigateTo(ModuleName.START_MENU, args);
+		navigateTo(ModuleName.START_MENU, args);
 	}
 
 }

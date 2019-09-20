@@ -16,7 +16,7 @@ public class NewGameController extends AbstractController<NewGameView> {
 	
 	public void startNewGame() {
 		String[] args = new String[0];
-		moduleNavigator.navigateTo(ModuleName.TUTORIAL, args);
+		navigateTo(ModuleName.TUTORIAL, args);
 	}
 
 	public void back(){
