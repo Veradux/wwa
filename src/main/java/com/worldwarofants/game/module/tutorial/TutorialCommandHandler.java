@@ -9,7 +9,7 @@ public class TutorialCommandHandler extends AbstractCommandHandler<TutorialContr
 	
 	public static final String COMMAND_SHOW_TUTORIAL_SCREEN_START = "show";
 	public static final String COMMAND_CONTINUE = "fight";
-	public static final String COMMAND_FALLBACK = "retreat";
+	public static final String COMMAND_RETREAT = "retreat";
 	public static final String COMMAND_QUIT = "quit";
 
 	public TutorialCommandHandler(TutorialController controller) {
@@ -20,7 +20,7 @@ public class TutorialCommandHandler extends AbstractCommandHandler<TutorialContr
 	protected void defineCommands(Map<String, ICommand<TutorialController>> commands) {
 		commands.put(COMMAND_SHOW_TUTORIAL_SCREEN_START, (controller, args) -> controller.showTutorialScreenStart());
 		commands.put(COMMAND_CONTINUE, (controller, args) -> controller.continueTheFight());
-		commands.put(COMMAND_FALLBACK, (controller, args) -> controller.retreat());
+		commands.put(COMMAND_RETREAT, (controller, args) -> controller.retreat());
 		commands.put(COMMAND_QUIT, (controller, args) -> controller.quit());
 	}
 
