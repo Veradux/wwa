@@ -16,10 +16,10 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 
 	public void navigateToNewGameModule() {
 		String[] args = new String[0];
-		moduleNavigator.navigateTo(ModuleName.NEW_GAME, args);
+		navigateTo(ModuleName.NEW_GAME, args);
 	}
 
 	public void exitGame(){
-		System.exit(0);
+		//TO-DO: exit the game using world.gameOver(); 
 	}
 }

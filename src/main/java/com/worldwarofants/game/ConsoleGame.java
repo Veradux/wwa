@@ -55,8 +55,11 @@ public class ConsoleGame extends ModuleManager {
     @Override
     protected void defineModules(IModuleNavigator navigator) {
         addModule(new NewGameModule(world, navigator));
+<<<<<<< HEAD
         addModule(new StartMenuModule(world, navigator));
         addModule(new TutorialModule(world, navigator));
+=======
+>>>>>>> menu
     }
 
     @Override

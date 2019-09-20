@@ -21,7 +21,7 @@ import com.worldwarofants.game.module.ModuleName;
  */
 public abstract class AbstractController<View extends AbstractView> {
 
-    protected final IModuleNavigator moduleNavigator;
+    private final IModuleNavigator moduleNavigator;
     protected final View view;
 
     public AbstractController(View view, IModuleNavigator navigator) {
