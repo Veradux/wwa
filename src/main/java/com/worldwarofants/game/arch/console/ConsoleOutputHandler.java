@@ -48,4 +48,8 @@ public class ConsoleOutputHandler{
         String formattedTitle = "-- " + title + " --";
         spell(formattedTitle);
     }
+
+    public static void postCommand(String description, String command) {
+         post(String.format("* %s - %s ", description, command));
+    }
 }
