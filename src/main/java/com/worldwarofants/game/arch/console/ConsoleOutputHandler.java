@@ -43,4 +43,9 @@ public class ConsoleOutputHandler{
     public static void promptInput() {
         post("Please enter your command:");
     }
+
+    public static void spellTitle(String title) {
+        String formattedTitle = "-- " + title + " --";
+        spell(formattedTitle);
+    }
 }
