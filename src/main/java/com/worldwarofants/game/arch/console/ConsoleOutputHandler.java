@@ -37,4 +37,10 @@ public class ConsoleOutputHandler{
     public static void lineBreak() {
         System.out.println(); 
     }
+    /**
+     * Output the standard message to prompt the user for input
+     */
+    public static void promptInput() {
+        post("Please enter your command:");
+    }
 }
