@@ -14,20 +14,21 @@ public class TutorialView extends AbstractView<TutorialViewModel> {
 	}
 
 	public void renderTutorialScreenStart() {
-		String fightPrompt = String.format("* Fight! - %s ", TutorialCommandHandler.COMMAND_FIGHT);
-		String retreatPrompt = String.format("* Retreat! - %s ", TutorialCommandHandler.COMMAND_RETREAT);
-		String quitPrompt = String.format("* Quit! - %s ", TutorialCommandHandler.COMMAND_QUIT);
+		final String FIGHT_DESC = "Fight";
+		final String RETREAT_DESC = "Retreat";
+		final String QUIT_DESC = "Quit";
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spell(START_MESSAGE);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post(fightPrompt);
-		ConsoleOutputHandler.post(retreatPrompt);
-		ConsoleOutputHandler.post(quitPrompt);
+		ConsoleOutputHandler.postCommand(FIGHT_DESC, TutorialCommandHandler.COMMAND_FIGHT);
+		ConsoleOutputHandler.postCommand(RETREAT_DESC, TutorialCommandHandler.COMMAND_RETREAT);
+		ConsoleOutputHandler.postCommand(QUIT_DESC, TutorialCommandHandler.COMMAND_QUIT);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post("Please enter your command:");
+		ConsoleOutputHandler.promptInput();
 	}
 
 	public void renderTutorialScreenFight() {
+		//TODO this ends the game.
 		ConsoleOutputHandler.spell(FIGHT_MESSAGE);
 	}
 
