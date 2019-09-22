@@ -5,14 +5,15 @@ import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
 public class StartMenuView extends AbstractView<StartMenuViewModel> {
 
+	private final String NEW_GAME_DESC = "New Game";
+	private final String EXIT_DESC = "Exit";
+	private final String TITLE = "WORLD WAR OF ANTS";
+	
 	public StartMenuView(StartMenuViewModel viewModel) {
 		super(viewModel);
 	}
 	
 	public void renderStartMenuScreen() {
-		final String NEW_GAME_DESC = "New Game";
-		final String EXIT_DESC = "Exit";
-		final String TITLE = "WORLD WAR OF ANTS";
 		ConsoleOutputHandler.lineBreak();
 		ConsoleOutputHandler.spellTitle(TITLE);
 		ConsoleOutputHandler.lineBreak();
