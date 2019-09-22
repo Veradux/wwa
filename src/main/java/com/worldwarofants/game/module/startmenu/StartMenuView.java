@@ -5,9 +5,9 @@ import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
 public class StartMenuView extends AbstractView<StartMenuViewModel> {
 
-	private final String NEW_GAME_DESC = "New Game";
-	private final String EXIT_DESC = "Exit";
-	private final String TITLE = "WORLD WAR OF ANTS";
+	private static final String NEW_GAME_DESC = "New Game";
+	private static final String EXIT_DESC = "Exit";
+	private static final String TITLE = "WORLD WAR OF ANTS";
 	
 	public StartMenuView(StartMenuViewModel viewModel) {
 		super(viewModel);
