@@ -62,6 +62,6 @@ public class ConsoleGame extends ModuleManager {
     }
 
     private String readInput() {
-        return scanner.nextLine().trim();
+        return scanner.nextLine().trim().toLowerCase();
     }
 }

@@ -2,9 +2,11 @@ package com.worldwarofants.game.module.startmenu;
 
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.model.World;
 import com.worldwarofants.game.module.ModuleName;
 
 public class StartMenuController extends AbstractController<StartMenuView> {
+	private World w = new World();
 
 	public StartMenuController(StartMenuView view, IModuleNavigator navigator) {
 		super(view, navigator);
@@ -19,7 +21,8 @@ public class StartMenuController extends AbstractController<StartMenuView> {
 		navigateTo(ModuleName.NEW_GAME, args);
 	}
 
-	public void exitGame(){
-		//TO-DO: exit the game using world.gameOver(); 
+	public void exitGame() {
+		//TO-DO: exit the game using world.gameOver();
+		w.gameOver();
 	}
 }
