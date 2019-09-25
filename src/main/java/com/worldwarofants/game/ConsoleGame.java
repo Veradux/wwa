@@ -6,6 +6,7 @@ import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.module.startmenu.StartMenuModule;
 import com.worldwarofants.game.module.newgame.NewGameModule;
+import com.worldwarofants.game.module.tutorial.TutorialModule;
 import com.worldwarofants.game.model.World;
 import java.util.Scanner;
 
@@ -54,6 +55,7 @@ public class ConsoleGame extends ModuleManager {
     @Override
     protected void defineModules(IModuleNavigator navigator) {
         addModule(new NewGameModule(world, navigator));
+        addModule(new TutorialModule(world, navigator));
     }
 
     @Override

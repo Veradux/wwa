@@ -5,19 +5,21 @@ import com.worldwarofants.game.arch.console.ConsoleOutputHandler;
 
 public class NewGameView extends AbstractView<NewGameViewModel> {
 
+	private static final String START_GAME_DESC = "Start Game";
+	private static final String BACK_DESC = "Back";
+	private static final String TITLE = "GAME SETUP";
+	
 	public NewGameView(NewGameViewModel viewModel) {
 		super(viewModel);
 	}
 
 	public void renderNewGameScreen() {
-		String startGamePrompt = String.format("* Start Game - %s ", NewGameCommandHandler.COMMAND_START_NEW_GAME);
-		String backPrompt = String.format("* Back - %s ", NewGameCommandHandler.COMMAND_BACK);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.spell("-- GAME SETUP --");
+		ConsoleOutputHandler.spellTitle(TITLE);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post(startGamePrompt);
-		ConsoleOutputHandler.post(backPrompt);
+		ConsoleOutputHandler.postCommand(START_GAME_DESC, NewGameCommandHandler.COMMAND_START_NEW_GAME);
+		ConsoleOutputHandler.postCommand(BACK_DESC, NewGameCommandHandler.COMMAND_BACK);
 		ConsoleOutputHandler.lineBreak();
-		ConsoleOutputHandler.post("Please enter your command:");
+		ConsoleOutputHandler.promptInput();
 	}
 }

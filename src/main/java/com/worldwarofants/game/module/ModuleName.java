@@ -7,5 +7,6 @@ package com.worldwarofants.game.module;
 public enum ModuleName {
     EXAMPLE,
     START_MENU,
-    NEW_GAME
+    NEW_GAME,
+    TUTORIAL
 }
